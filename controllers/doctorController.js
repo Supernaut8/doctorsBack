@@ -3,7 +3,7 @@ const Doctors = require('../models/doctorModel')
 const doctorController = {
     getAllDoctors: async (req, res) => {
         try {
-            const foundDoctors = await Doctors.find()
+            const foundDoctors = await Doctors.find().populate("plan")
             return res.status(200).json({ sucess: true, message: "All doctors", doctor: foundDoctors })
         } catch (error) {
             return res.status(500).json({ sucess: false })

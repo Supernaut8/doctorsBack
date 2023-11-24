@@ -9,6 +9,7 @@ const doctorsSchema = new mongoose.Schema({
     dni : {type:Number, required:true},
     license : {type:Number, required:true},
     meetCost : {type:Number, required:true},
+    idPlan:{type:mongoose.Types.ObjectId, ref:"planes"}
 })
 
 const Doctors = mongoose.model('doctors', doctorsSchema)
