@@ -1,8 +1,6 @@
 const express = require('express')
 const doctorRouter = express.Router()
 const doctorController = require('../controllers/doctorController')
-const validator = require('../config/validator.js')
-
 
 doctorRouter.get('/doctors',doctorController.getAllDoctors)
 doctorRouter.post('/doctors',doctorController.addDoctors)
