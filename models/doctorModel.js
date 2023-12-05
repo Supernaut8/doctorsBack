@@ -10,7 +10,8 @@ const planSchema = new mongoose.Schema({
 const doctorsSchema = new mongoose.Schema({
     name : {type:String, required:true},
     lastName : {type:String, required:true},
-    specialty : {type:String, required:true},
+    email : {type:String, required:true},
+    specialty : {type:String, required:true},    
     description : {type:String, default:"no description"},
     image : {type:String, default:"no image"},
     dni : {type:Number, required:true},

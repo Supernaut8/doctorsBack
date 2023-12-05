@@ -1,3 +1,4 @@
+const functions = require("firebase-functions");
 const express = require('express');
 require("dotenv").config();
 const cors = require("cors");
@@ -25,3 +26,5 @@ app.set("port", PORT);
 app.listen(PORT, () => {
     console.log("servidor corriendo en el puerto: " + app.get('port'))
 })
+
+exports.app = functions.https.onRequest(app)
